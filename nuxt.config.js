@@ -38,7 +38,17 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios'
   ],
+
+  axios: {
+    baseURL: "http://localhost:8080",
+    proxy: true     // proxy 사용
+  },
+
+  proxy: {
+    '/prefix-url': 'proxy-url'    // proxy url
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
